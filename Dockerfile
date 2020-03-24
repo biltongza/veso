@@ -7,7 +7,6 @@ RUN apk add curl git \
  && git clone --branch release-1.0.z --single-branch https://github.com/vesotv/veso-web.git \
  && cd veso-web \
  && yarn install \
- && yarn build \
  && mv dist /dist
 
 FROM mcr.microsoft.com/dotnet/core/sdk:${DOTNET_VERSION}-buster as builder
